@@ -1,0 +1,84 @@
+<link rel="import" href="../app/layout-main.html">
+<link rel="import" href="../link.html">
+<meta charset="UTF-8">
+
+<dom-module id="email-page1">
+  <style include="iron-flex iron-flex-alignment">
+  .top{
+    margin: 20px;
+  }
+  .left{
+    margin-left: 20px;
+  }
+  .left1{
+    margin-left: 5.2em;
+  }
+  .left2{
+    margin-left: 4.5em;
+  }
+  .left3{
+    margin-left: 43px;
+  }
+  .left4{
+    margin-left: 3.5em;
+  }
+  .icon{
+    width: 20px;
+    height: 20px;
+    color: gray;
+  }
+  .box{
+    width: 5em;
+  }
+  paper-button.indigo {
+    background-color: var(--paper-blue-500);
+    color: white;
+    height: 30px;
+    margin-left: 11em;
+    };
+  }
+  </style>
+  <template>
+
+    <div class="horizontal layout top">
+      <div  class="left1"><my-title title="จาก"></my-title></div>
+      <div  class="left"><iron-icon class="icon" icon="notification:sms-failed"></iron-icon></div>
+      <div  class="left"><input type="text" name="name" value=""></div>
+    </div>
+    <div class="horizontal layout top">
+      <div  class="left2"><my-title title="หัวข้อ"></my-title></div>
+      <div  class="left"><iron-icon class="icon" icon="notification:sms-failed"></iron-icon></div>
+      <div  class="left"><input type="text" name="name" value=""></div>
+    </div>
+    <div class="horizontal layout top">
+      <div  class="left3"><my-title title="รูปแบบของ"></my-title></div>
+      <div  class="left"><iron-icon class="icon" icon="notification:sms-failed"></iron-icon></div>
+      <div  class="left"><paper-radio-button noink>Liquid</paper-radio-button> <paper-radio-button noink>Markdown</paper-radio-button></div>
+    </div>
+    <div class="horizontal layout top">
+      <div  class="left4"><my-title title="ข้อความ"></my-title></div>
+      <div  class="left"><iron-icon class="icon" icon="notification:sms-failed"></iron-icon></div>
+      <div  class="left"><textarea name="name" rows="6" cols="35"></textarea></div>
+    </div>
+    <div class="horizontal layout top">
+      <div  class="left"><my-title title="ระยะเวลา OTP"></my-title></div>
+      <div  class="left"><iron-icon class="icon" icon="notification:sms-failed"></iron-icon></div>
+      <div  class="left"><input class="box" type="text" name="name" value=""></div>
+    </div>
+    <div class="horizontal layout top">
+      <div  class="left"><my-title title="ความยาว OTP"></my-title></div>
+      <div  class="left"><iron-icon class="icon" icon="notification:sms-failed"></iron-icon></div>
+      <div  class="left"><input class="box" type="text" name="name" value=""></div>
+    </div>
+    <div>
+      <paper-button raised class="indigo">Save</paper-button>
+    </div>
+
+  </template>
+  <script>
+    Polymer({
+      is: "email-page1",
+
+    });
+  </script>
+</dom-module>

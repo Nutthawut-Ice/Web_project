@@ -1,0 +1,68 @@
+<dom-module id="db-setting">
+  <style include="iron-flex iron-flex-alignment">
+.top{
+  margin-top: 20px;
+  margin-left: 50px;
+}
+.right{
+  margin-right: 34em;
+}
+.rightz{
+  margin-right: 32em;
+}
+.left{
+  margin-left: 15em;
+}
+.down{
+  margin-top: 30px;
+}
+paper-button.indigo {
+  background-color: var(--paper-blue-500);
+  color: white;
+  margin-top: 20px;
+  margin-left: 25em;
+  };
+}
+  </style>
+  <template>
+    <div class="vertical layout">
+      <div class="horizontal justified layout top">
+        <div class="left down"><my-title title="Database Type"></my-title></div>
+        <div class="rightz">
+          <paper-dropdown-menu label="Database">
+            <paper-listbox class="dropdown-content">
+              <paper-item>MySql</paper-item>
+              <paper-item>MS SQL</paper-item>
+              <paper-item>Oracle</paper-item>
+              <paper-item>...</paper-item>
+            </paper-listbox>
+          </paper-dropdown-menu>
+        </div>
+      </div>
+
+      <div class="horizontal justified layout top">
+        <div class="left"><my-title title="Server"></my-title></div>
+        <div class="right"><input type="text" name="name" value=""></div>
+      </div>
+
+      <div class="horizontal justified layout top">
+        <div class="left"><my-title title="Username"></my-title></div>
+        <div class="right"><input type="text" name="name" value=""></div>
+      </div>
+
+      <div class="horizontal justified layout top">
+        <div class="left"><my-title title="Password"></my-title></div>
+        <div class="right"><input type="password" name="name" value=""></div>
+      </div>
+      <div>
+        <paper-button raised class="indigo">บันทึก</paper-button>
+      </div>
+    </div>
+  </template>
+  <script>
+    Polymer({
+      is: "db-setting",
+
+    });
+  </script>
+</dom-module>

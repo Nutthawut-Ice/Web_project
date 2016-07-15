@@ -1,0 +1,123 @@
+<link rel="import" href="app/layout-main.html">
+<link rel="import" href="app/title.html">
+<link rel="import" href="link.html">
+<meta charset="UTF-8">
+
+<layout-main>
+  <page-four></page-four>
+</layout-main>
+
+<dom-module id="page-four">
+  <style include="iron-flex iron-flex-alignment">
+  .input{
+    width: 250px;
+    text-align: left;
+    margin-left: 20px;
+  }
+  .top{
+    margin-top: 20px;
+  }
+  .tope{
+    margin-top: 35px;
+    margin-left: 20px;
+  }
+  .topa{
+    margin-top: 35px;
+    margin-left: 6em;
+  }
+  .topb{
+    margin-top: 15px;
+    margin-left: 5em;
+  }
+  .left{
+    margin-left: 20px;
+  }
+  .content{
+    width: 700px;
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+  .text{
+    color: gray;
+    font-size: 20px;
+  }
+  .tween{
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  paper-button.indigo {
+    background-color: var(--paper-blue-500);
+    color: white;
+    height: 30px;
+    margin-top: 10px;
+    }
+  </style>
+  <template>
+
+    <div class="horizontal layout">
+      <div class="flex"><h3><my-title title="ลงทะเบียนใช้งาน"></my-title></h3></div>
+    </div>
+
+    <div class="horizontal layout">
+      <div class="tope">ID/Username/Email</div>
+      <div class="input">
+        <paper-input label="Email" id="email">
+          <iron-icon icon="mail" prefix></iron-icon>
+        </paper-input>
+      </div>
+    </div>
+
+    <div class="horizontal layout">
+      <div class="topa">รหัสผ่าน</div>
+      <div class="input">
+        <paper-input label="Email" id="password" type="password">
+          <iron-icon icon="icons:settings" prefix></iron-icon>
+        </paper-input>
+      </div>
+    </div>
+
+    <div class="horizontal layout top">
+      <div class="topb">ล็อคอินด้วย</div>
+      <div class="left">
+        <paper-dropdown-menu class="custom" label="Application" no-label-float>
+          <paper-listbox class="dropdown-content">
+            <paper-item>Comming Soon</paper-item>
+            <paper-item>Comming Soon</paper-item>
+          </paper-listbox>
+        </paper-dropdown-menu>
+      </div>
+    </div>
+
+
+    <div class="content">
+      <div class="text">แอพพลิเคชั่นที่ต้องการใช้งาน</div>
+      <hr>
+
+      <div class="horizontal layout demo tween">
+        <div class="flex">ระบบสวัสดิการ</div>
+        <div class="flex-3"><paper-toggle-button></paper-toggle-button></div>
+      </div><hr>
+
+      <div class="horizontal layout demo tween">
+        <div class="flex">ระบบฐานข้อมูลมหาวิทยาลัย</div>
+        <div class="flex-3"><paper-toggle-button></paper-toggle-button></div>
+      </div><hr>
+
+      <div class="horizontal end-justified layout top">
+        <paper-button raised class="indigo" on-tap="link" data-href="user-login.html">ลงทะเบียน</paper-button>
+      </div>
+
+    </div>
+
+  </template>
+  <script>
+    Polymer({
+      is:'page-four',
+      link:function(e){
+        // console.log('test');
+        var args = e.target.getAttribute('data-href');
+        window.location= args;
+      }
+    });
+  </script>
+</dom-module>

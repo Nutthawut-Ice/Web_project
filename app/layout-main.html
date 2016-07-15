@@ -1,0 +1,50 @@
+<link rel="import" href="../link.html">
+<link rel="import" href="menu.html">
+<link rel="import" href="head.html">
+<link rel="import" href="dropdown.html">
+
+
+<dom-module id="layout-main">
+<style include="iron-flex"></style>
+
+  <template>
+
+      <meta charset="UTF-8">
+      <title>title</title>
+
+
+      <paper-drawer-panel responsive-width="960px">
+        <paper-header-panel drawer>
+          <paper-toolbar>
+            <div>Menu</div>
+          </paper-toolbar>
+          <div> <my-menu></my-menu> </div>
+        </paper-header-panel>
+        <paper-header-panel main>
+          <paper-toolbar>
+            <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+            <span class="title"><iron-icon icon="icons:perm-identity"></iron-icon>ระบบรักษาความมั่นคงปลอดภัยด้วยการพิสูจน์บุคคล</span>
+
+            <paper-icon-button id="number" icon="social:notifications"></paper-icon-button>
+            <paper-badge for="number" label="3"></paper-badge>
+
+
+          </paper-toolbar>
+          <div> <content></content> </div>
+        </paper-header-panel>
+      </paper-drawer-panel>
+
+
+
+
+
+  </template>
+
+
+  <script>
+    Polymer({
+      is:'layout-main'
+    });
+  </script>
+
+</dom-module>

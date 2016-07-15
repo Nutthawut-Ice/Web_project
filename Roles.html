@@ -1,0 +1,77 @@
+<link rel="import" href="app/layout-main.html">
+<link rel="import" href="app/button.html">
+<link rel="import" href="app/my-data.html">
+<link rel="import" href="app/data.html">
+<meta charset="UTF-8">
+
+<!-- <layout-main>
+  <my-roles></my-roles>
+</layout-main> -->
+
+<dom-module id="my-roles">
+<style include="iron-flex iron-flex-alignment">
+.flex-3{
+  margin-right: 50px;
+}
+.flex-2{
+  margin-right: 50px;
+}
+.flex{
+  margin-left: 25px;
+}
+paper-fab.red {
+    --paper-fab-background: var(--paper-red-500);
+    --paper-fab-keyboard-focus-background: var(--paper-red-900);
+  }
+  paper-fab.orange {
+      --paper-fab-background: var(--paper-orange-800);
+      --paper-fab-keyboard-focus-background: var(--paper-orange-900);
+    }
+.mini{
+  width: 20px;
+  height: 20px;
+}
+.top{
+  margin-right: 10px;
+  margin-top: 10px;
+}
+</style>
+  <template>
+    <div class="horizontal end-justified layout top"><my-insert on-tap="_add"></my-insert></div>
+    <!-- <page-second></page-second> -->
+    <hr>
+
+    <div class="horizontal layout demo">
+      <div class="flex">Role</div>
+      <div class="flex-3">Enable</div>
+      <div class="flex-2">Del</div>
+    </div>
+
+    <hr>
+
+    <my-data menu={{menuData}}></my-data>
+    <name-data data={{menuData}}></name-data>
+
+
+
+  </template>
+
+  <script>
+  Polymer({
+    is: "my-roles",
+    properties: {
+      data: {
+        type: Object,
+        notify: false,
+      }
+    },
+    _add:function () {
+      var time = Date.now();
+      this.push('data',{id:time, user:"Usernew", role: "User", enable:""});
+      console.log(1);
+    }
+
+  });
+  </script>
+
+</dom-module>

@@ -1,0 +1,46 @@
+<link rel="import" href="app/layout-main.html">
+<link rel="import" href="app/title.html">
+<link rel="import" href="link.html">
+<meta charset="UTF-8">
+
+<layout-main>
+  <user-login></user-login>
+</layout-main>
+
+<dom-module id="user-login">
+  <style  include="iron-flex iron-flex-alignment">
+    paper-tabs, paper-toolbar {
+    /*background-color: var(--paper-green-500);*/
+    color: blue;
+  }
+  paper-tabs paper-tab.iron-selected {
+    color: black;
+  }
+  </style>
+  <template>
+
+    <div class="horizontal layout">
+      <div class="flex"><h3><my-title title="ผู้ใช้งาน"></my-title></h3></div>
+    </div>
+
+    <div class="horizontal layout">
+    <paper-tabs id="plain-tabs" selected="{{selected}}" attr-for-selected="name">
+      <paper-tab name="a">ข้อมูลส่วนตัว</paper-tab>
+      <paper-tab name="b">สิทธิการใช้งาน</paper-tab>
+    </paper-tabs>
+    </div>
+
+    <iron-pages selected="{{selected}}" attr-for-selected="name">
+      <div name="a"><user-profile></user-profile></div>
+      <div name="b"><user-licenses></user-licenses></div>
+    </iron-pages>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: "user-login",
+
+    });
+  </script>
+</dom-module>

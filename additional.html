@@ -1,0 +1,52 @@
+<link rel="import" href="app/layout-main.html">
+<meta charset="UTF-8">
+
+<!-- <layout-main>
+  <my-additional></my-additional>
+</layout-main> -->
+
+<dom-module id="my-additional">
+<style include="iron-flex iron-flex-alignment">
+  .tween{
+    width:150px;
+    height: 50px;
+    border: 2px solid black;
+    margin: 1px;
+    padding: 10px;
+    font-size: 120%;
+  }
+  .big{
+    --iron-icon-height: 42px;
+    --iron-icon-width: 42px;
+  }
+  paper-toggle-button.green {
+   --paper-toggle-button-checked-bar-color:  var(--paper-green-500);
+   --paper-toggle-button-checked-button-color:  var(--paper-green-500);
+   --paper-toggle-button-checked-ink-color: var(--paper-green-500);
+   --paper-toggle-button-unchecked-bar-color:  var(--paper-indigo-500);
+   --paper-toggle-button-unchecked-button-color:  var(--paper-indigo-500);
+   --paper-toggle-button-unchecked-ink-color: var(--paper-indigo-500);
+ }
+</style>
+  <template>
+    <!-- <page-second></page-second> -->
+    <div class="horizontal center-justified layout">
+    <div class="horizontal justified layout tween"><iron-icon class="big" icon="icons:cloud-queue"></iron-icon><p>AD</p><paper-toggle-button class="green"></paper-toggle-button></div>
+    <div class="horizontal justified layout tween"><iron-icon class="big" icon="icons:cloud-queue"></iron-icon><p>LDAP</p><paper-toggle-button class="green"></paper-toggle-button></div>
+    <div class="horizontal justified layout tween"><iron-icon class="big" icon="icons:cloud-queue"></iron-icon><p>SAML2</p><paper-toggle-button class="green"></paper-toggle-button></div>
+    </div>
+
+<!-- <div class="horizontal justified layout tween"><iron-icon class="big" icon="icons:cloud-queue"></iron-icon>AD<paper-toggle-button checked></paper-toggle-button></div> -->
+
+
+  </template>
+
+  <script>
+  Polymer({
+    is: "my-additional",
+
+  });
+  </script>
+
+
+</dom-module>

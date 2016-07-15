@@ -1,0 +1,44 @@
+<dom-module id="my-dropdown">
+<style>
+paper-dropdown-menu.custom {
+  --paper-input-container-label: {
+    color: black;
+    text-align: left;
+  };
+  --paper-input-container-input: {
+    color: black;
+    font-style: normal;
+    font-family: serif;
+    text-transform: uppercase;
+  }
+  /* no underline */
+  --paper-input-container-underline: {
+    display: none;
+  };
+}
+
+</style>
+  <template>
+    <paper-dropdown-menu class="custom" label="การเชื่อมต่อ" no-label-float>
+      <paper-listbox class="dropdown-content">
+        <paper-item on-tap="link" data-href="database.html">Database</paper-item>
+        <paper-item on-tap="link" data-href="api.html">Rest API</paper-item>
+        <paper-item on-tap="link" data-href="social.html">Social</paper-item>
+        <paper-item on-tap="link" data-href="addons.html">Addons</paper-item>
+        <paper-item on-tap="link" data-href="email.html">Email</paper-item>
+        <paper-item on-tap="link" data-href="sms.html">SMS</paper-item>
+      </paper-listbox>
+    </paper-dropdown-menu>
+  </template>
+
+  <script>
+    Polymer({
+      is: "my-dropdown",
+      link:function(e){
+        // console.log('test');
+        var args = e.target.getAttribute('data-href');
+        window.location= args;
+      }
+      });
+  </script>
+</dom-module>

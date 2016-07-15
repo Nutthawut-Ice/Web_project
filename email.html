@@ -1,0 +1,111 @@
+<link rel="import" href="app/layout-main.html">
+<link rel="import" href="app/title.html">
+<link rel="import" href="link.html">
+<meta charset="UTF-8">
+
+<layout-main>
+  <my-email></my-email>
+</layout-main>
+
+<dom-module id="my-email">
+  <style include="iron-flex iron-flex-alignment">
+  .content{
+    width:800px;
+    height: 500px;
+    border: 2px solid black;
+    margin: 1px;
+    padding: 10px;
+    font-size: 120%;
+    }
+    .left{
+      margin-left: 5em;
+    }
+    .leftz{
+      margin-left: 20px;
+    }
+    .leftzz{
+      margin-left: 12px;
+    }
+    .leftm{
+      margin-left: 2em;
+    }
+    .lefte{
+      margin-left: 8px;
+    }
+    .top{
+      margin: 20px;
+    }
+    .right{
+      margin-right: 46em;
+    }
+    .icon{
+      width: 20px;
+      height: 20px;
+      color: gray;
+    }
+    paper-tabs[no-bar] paper-tab.iron-selected {
+    color: blue;
+  }
+  paper-tabs, paper-toolbar {
+        /*background-color: var(--paper-green-500);*/
+        color: black;
+        border: 1px solid black;
+      }
+  </style>
+  <template>
+    <div class="horizontal layout">
+      <div class="flex"><h3><my-title title="Email Connections"></my-title></h3></div>
+    </div>
+    <div class="horizontal layout">
+      <div class="left"><iron-icon icon="icons:mail"></iron-icon></div>
+      <div class="leftz">Email</div>
+      <div class="leftz"><paper-toggle-button></paper-toggle-button></div>
+    </div>
+
+    <div class="horizontal layout top">
+      <div  class="leftm"><my-title title="SMTP"></my-title></div>
+      <div  class="leftz"><iron-icon class="icon" icon="notification:sms-failed"></iron-icon></div>
+      <div  class="leftz"><input type="text" name="name" value=""></div>
+    </div>
+
+    <div class="horizontal layout top">
+      <div  class="lefte"><my-title title="Username"></my-title></div>
+      <div  class="leftz"><iron-icon class="icon" icon="notification:sms-failed"></iron-icon></div>
+      <div  class="leftz"><input type="text" name="name" value=""></div>
+    </div>
+
+    <div class="horizontal layout top">
+      <div  class="leftzz"><my-title title="Password"></my-title></div>
+      <div  class="leftz"><iron-icon class="icon" icon="notification:sms-failed"></iron-icon></div>
+      <div  class="leftz"><input type="password" name="name" value=""></div>
+    </div>
+
+    <div class="content">
+      <paper-tabs id="plain-tabs" selected="{{selected}}" attr-for-selected="name" no-bar>
+        <paper-tab name="a">One Time Password</paper-tab>
+        <paper-tab name="b">ลืมรหัสผ่าน</paper-tab>
+        <paper-tab name="c">Verification</paper-tab>
+        <paper-tab name="d">Welcome</paper-tab>
+        <paper-tab name="e">Change Password</paper-tab>
+      </paper-tabs>
+
+      <iron-pages selected="{{selected}}" attr-for-selected="name">
+        <div name="a"><email-page1></email-page1></div>
+        <div name="b"><h1>Comming Soon!!</h1></div>
+        <div name="c"><h1>Comming Soon!!</h1></div>
+        <div name="d"><h1>Comming Soon!!</h1></div>
+        <div name="e"><h1>Comming Soon!!</h1></div>
+        <div name="f"><h1>Comming Soon!!</h1></div>
+      </iron-pages>
+    </div>
+
+
+  </template>
+
+  <script>
+    Polymer({
+      is: "my-email",
+
+    });
+  </script>
+</dom-module>

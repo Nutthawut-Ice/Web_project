@@ -1,0 +1,56 @@
+<dom-module id="my-detail">
+  <style include="iron-flex iron-flex-alignment">
+  .flex-3{
+    margin-right: 50px;
+  }
+  .flex-2{
+    margin-right: 50px;
+  }
+  .flex{
+    margin-left: 25px;
+  }
+  </style>
+  <template>
+    <div class="horizontal layout demo">
+      <div class="flex">[[item.role]]</div>
+      <div class="flex-3"><paper-toggle-button></paper-toggle-button></div>
+      <div class="flex-2"><my-delete></my-delete></div>
+    </div><br>
+  </template>
+
+  <script>
+    Polymer({
+      is: "my-detail",
+
+    });
+  </script>
+</dom-module>
+
+<dom-module id="my-details">
+  <style include="iron-flex iron-flex-alignment">
+  .flex-3{
+    margin-right: 50px;
+  }
+  .flex-2{
+    margin-right: 50px;
+  }
+  .flex{
+    margin-left: 25px;
+  }
+  </style>
+  <template>
+    <div class="horizontal layout demo">
+      <div class="flex">[[items.user]]</div>
+      <div class="flex">[[items.role]]</div>
+      <div class="flex-3"><paper-toggle-button></paper-toggle-button></div>
+      <div class="flex-2"><my-delete></my-delete></div>
+    </div><br>
+  </template>
+
+  <script>
+    Polymer({
+      is: "my-details",
+
+    });
+  </script>
+</dom-module>

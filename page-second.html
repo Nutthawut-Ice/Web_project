@@ -1,0 +1,52 @@
+<link rel="import" href="app/layout-main.html">
+<link rel="import" href="app/title.html">
+<link rel="import" href="link.html">
+<meta charset="UTF-8">
+<layout-main>
+  <page-second></page-second>
+</layout-main>
+
+<dom-module id="page-second">
+<style>
+.link {
+  @apply(--layout-horizontal);
+  @apply(--layout-center-center);
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+</style>
+  <template>
+
+    <h3><my-title title="ระบบสวัสดิการ"></my-title></h3>
+    <paper-tabs selected="{{selected}}" attr-for-selected="name">
+      <paper-tab name="a">เริ่มต้นใช้งาน</paper-tab>
+      <paper-tab name="b">ตั้งค่า</paper-tab>
+      <paper-tab name="c">เพิ่มเติม</paper-tab>
+      <paper-tab name="d">การเชื่อมต่อ</paper-tab>
+      <paper-tab name="e">บทบาท (Roles)</paper-tab>
+      <paper-tab name="f">ผู้ใช้งาน(User Access)</paper-tab>
+    </paper-tabs>
+
+    <iron-pages selected="{{selected}}" attr-for-selected="name">
+      <div name="a"><my-basic></my-basic></div>
+      <div name="b"><h1>Comming Soon!!</h1></div>
+      <div name="c"><my-additional></my-additional></div>
+      <div name="d"><h1>Comming Soon!!</h1></div>
+      <div name="e"><my-roles></my-roles></div>
+      <div name="f"><my-user></my-user></div>
+    </iron-pages>
+
+
+  </template>
+  <script>
+    Polymer({
+      is:'page-second',
+        selected:{
+          type: String,
+          value: "a"
+        }
+    });
+  </script>
+</dom-module>

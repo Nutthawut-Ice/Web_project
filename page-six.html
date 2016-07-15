@@ -1,0 +1,40 @@
+<link rel="import" href="app/layout-main.html">
+<link rel="import" href="app/title.html">
+<link rel="import" href="link.html">
+<meta charset="UTF-8">
+
+<layout-main>
+  <page-six></page-six>
+</layout-main>
+
+<dom-module id="page-six">
+  <style include="iron-flex iron-flex-alignment">
+  .content{
+    width: 1200px;
+  }
+  .search{
+    border: 0px;
+    width: 200px;
+    height: 30px;
+  }
+  </style>
+
+  <template>
+    <div>
+      <div class="horizontal layout">
+        <div class="flex"><h3><my-title title="ข้อมูลการเข้าใช้งาน"></my-title></h3></div>
+      </div>
+
+      <div>
+        <iron-icon icon="icons:search"></iron-icon>
+        <input class="search" placeholder="Search"value="{{myValue::input}}">
+      </div>
+    </div>
+
+  </template>
+  <script>
+    Polymer({
+      is:'page-six'
+    });
+  </script>
+</dom-module>

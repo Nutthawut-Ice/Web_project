@@ -1,0 +1,62 @@
+<link rel="import" href="app/layout-main.html">
+<link rel="import" href="app/title.html">
+<link rel="import" href="link.html">
+<meta charset="UTF-8">
+
+<layout-main>
+  <my-api></my-api>
+</layout-main>
+
+<dom-module id="my-api">
+<style include="iron-flex iron-flex-alignment">
+  .top{
+    margin: 20px;
+  }
+  .right{
+    margin-right: 10px;
+  }
+  .left {
+    margin-left: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  .icon{
+    width: 50px;
+    height: 50px;
+  }
+</style>
+  <template>
+
+    <div class="horizontal layout">
+      <div class="flex"><h3><my-title title="Rest API Connections"></my-title></h3></div>
+      <div class="top"><my-insert></my-insert></div>
+    </div>
+
+    <hr>
+    <div class="horizontal layout">
+      <div class="flex left">UPIS</div>
+      <div class="right">
+        <a href="apiset.html" tabindex="-1">
+        <paper-icon-button class="icon" icon="icons:settings-applications"></paper-icon-button>
+        </a>
+      </div>
+    </div>
+
+    <hr>
+    <div class="horizontal layout">
+      <div class="flex left">My API</div>
+      <div class="right">
+        <a href="apiset.html" tabindex="-1">
+        <paper-icon-button class="icon" icon="icons:settings-applications"></paper-icon-button>
+        </a>
+      </div>
+    </div>
+
+  </template>
+  <script>
+    Polymer({
+      is: "my-api",
+
+    });
+  </script>
+</dom-module>

@@ -1,0 +1,89 @@
+<link rel="import" href="app/layout-main.html">
+<link rel="import" href="app/title.html">
+<link rel="import" href="link.html">
+<meta charset="UTF-8">
+
+<layout-main>
+  <my-addons></my-addons>
+</layout-main>
+
+<dom-module id="my-addons">
+<style include="iron-flex iron-flex-alignment">
+  .top{
+    margin: 20px;
+  }
+  .tween{
+    width:150px;
+    height: 50px;
+    border: 2px solid black;
+    margin: 1px;
+    padding: 10px;
+    font-size: 120%;
+  }
+  .big{
+    --iron-icon-height: 42px;
+    --iron-icon-width: 42px;
+
+  }
+  .left{
+    margin-left: 20px;
+  }
+  .right{
+    margin-right: 46em;
+  }
+  paper-button.indigo {
+    background-color: var(--paper-blue-500);
+    color: white;
+    margin-top: 15px;
+    margin-left: 11.5em;
+    };
+  }
+</style>
+<template>
+  <div class="horizontal layout">
+    <div class="flex"><h3><my-title title="Addons Connections"></my-title></h3></div>
+  </div>
+
+  <div class="horizontal layout">
+    <div class="horizontal layout tween"><iron-icon class="big" icon="icons:cloud-queue"></iron-icon><p>AD</p><paper-toggle-button class="green"></paper-toggle-button></div>
+    <div class="horizontal layout tween"><iron-icon class="big" icon="icons:cloud-queue"></iron-icon><p>LDAP</p><paper-toggle-button class="green"></paper-toggle-button></div>
+    <div class="horizontal layout tween"><iron-icon class="big" icon="icons:cloud-queue"></iron-icon><p>SAML2</p><paper-toggle-button class="green"></paper-toggle-button></div>
+    </div>
+
+  <div class="horizontal layout">
+    <h3><my-title title="LDAP Setting"></my-title></h3>
+  </div>
+
+  <div class="horizontal justified layout top">
+    <div><my-title title="Server"></my-title></div>
+    <div class="right"><input type="text" name="name" value=""></div>
+  </div>
+
+  <div class="horizontal justified layout top">
+    <div><my-title title="Seacrh Base"></my-title></div>
+    <div class="right"><input type="text" name="name" value=""></div>
+  </div>
+
+  <div class="horizontal justified layout top">
+    <div><my-title title="Username"></my-title></div>
+    <div class="right"><input type="text" name="name" value=""></div>
+  </div>
+
+  <div class="horizontal justified layout top">
+    <div><my-title title="Password"></my-title></div>
+    <div class="right"><input type="password" name="name" value=""></div>
+  </div>
+
+  <div>
+    <paper-button raised class="indigo">บันทึก</paper-button>
+  </div>
+
+</template>
+
+  <script>
+    Polymer({
+      is: "my-addons",
+
+    });
+  </script>
+</dom-module>

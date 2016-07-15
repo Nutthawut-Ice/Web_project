@@ -1,0 +1,26 @@
+<dom-module id="my-data">
+  <style>
+    :host {
+      display: block;
+    }
+  </style>
+  <template>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: "my-data",
+      properties: {
+        menu: {
+          type: Object,
+          notify: true,
+          value: [
+            {id:0, user: "Administrator", role: "Admin", enable:""},
+            {id:1, user: "User1", role: "User", enable:""}
+          ]
+        }
+      }
+    });
+  </script>
+</dom-module>

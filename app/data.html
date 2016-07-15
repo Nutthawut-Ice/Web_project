@@ -1,0 +1,47 @@
+<link rel="import" href="my-detail.html">
+<dom-module id="name-data">
+  <style>
+    :host {
+      display: block;
+    }
+  </style>
+  <template>
+
+    <template is="dom-repeat" items="{{data}}">
+      <my-detail item={{item}}></my-detail>
+    </template>
+
+  </template>
+  <script>
+    Polymer({
+      is: "name-data",
+
+
+    });
+  </script>
+</dom-module>
+
+
+<dom-module id="data-new">
+  <style>
+    :host {
+      display: block;
+    }
+  </style>
+  <template>
+
+    <template is="dom-repeat" items="{{datas}}">
+      <my-details items={{item}}></my-details>
+    </template>
+    
+  </template>
+  <script>
+    Polymer({
+      is: "data-new",
+      ready: function() {
+        console.log(5555);
+      },
+
+    });
+  </script>
+</dom-module>

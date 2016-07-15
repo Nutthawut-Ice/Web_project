@@ -1,0 +1,27 @@
+<dom-module id="my-menu">
+
+  <template>
+    <paper-listbox link>
+      <paper-item on-tap="link" data-href="page-first.html">ภาพรวม</paper-item>
+      <paper-item on-tap="link" data-href="page-second.html">แอพพลิเคชั่น</paper-item>
+      <paper-item><my-dropdown></my-dropdown></paper-item>
+      <paper-item on-tap="link" data-href="page-four.html">ผู้ใช้งาน</paper-item>
+      <paper-item on-tap="link" data-href="page-five.html">หน้าล็อกอิน</paper-item>
+      <paper-item on-tap="link" data-href="page-six.html">ข้อมูลการเข้าใช้งาน</paper-item>
+    </paper-listbox>
+
+
+
+  </template>
+
+  <script>
+  Polymer({
+    is: "my-menu",
+    link:function(e){
+      // console.log('test');
+      var args = e.target.getAttribute('data-href');
+      window.location= args;
+    }
+  });
+  </script>
+</dom-module>

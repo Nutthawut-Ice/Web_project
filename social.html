@@ -1,0 +1,79 @@
+<link rel="import" href="app/layout-main.html">
+<link rel="import" href="app/title.html">
+<link rel="import" href="link.html">
+<meta charset="UTF-8">
+
+<layout-main>
+  <my-socail></my-socail>
+</layout-main>
+
+<dom-module id="my-socail">
+  <style include="iron-flex iron-flex-alignment">
+    .top{
+      margin: 20px;
+    }
+    .tween{
+      width:150px;
+      height: 50px;
+      border: 2px solid black;
+      margin: 1px;
+      padding: 10px;
+      font-size: 120%;
+    }
+    .big{
+      --iron-icon-height: 40px;
+      --iron-icon-width: 150px;
+
+    }
+    .left{
+      margin-left: 20px;
+    }
+    .right{
+      margin-right: 46em;
+    }
+    paper-button.indigo {
+      background-color: var(--paper-blue-500);
+      color: white;
+      margin-top: 15px;
+      margin-left: 11.5em;
+      };
+    }
+  </style>
+  <template>
+    <div class="horizontal layout">
+      <div class="flex"><h3><my-title title="Social Connections"></my-title></h3></div>
+    </div>
+
+    <div class="horizontal layout">
+    <div class="horizontal layout tween"><iron-icon class="big" src="img/facebook.png"></iron-icon><paper-toggle-button class="green left"></paper-toggle-button></div>
+    <div class="horizontal layout tween"><iron-icon class="big" src="img/google.png"></iron-icon><paper-toggle-button class="green left"></paper-toggle-button></div>
+    <div class="horizontal layout tween"><iron-icon class="big" src="img/Microsoft.png"></iron-icon><paper-toggle-button class="green left"></paper-toggle-button></div>
+    </div>
+
+    <div class="horizontal layout">
+      <h3><my-title title="google Setting"></my-title></h3>
+    </div>
+
+    <div class="horizontal justified layout top">
+      <div><my-title title="google  Client ID"></my-title></div>
+      <div class="right"><input type="text" name="name" value=""></div>
+    </div>
+
+    <div class="horizontal justified layout top">
+      <div><my-title title="google  Client Secret"></my-title></div>
+      <div class="right"><input type="text" name="name" value=""></div>
+    </div>
+
+    <div>
+      <paper-button raised class="indigo">บันทึก</paper-button>
+    </div>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: "my-socail",
+
+    });
+  </script>
+</dom-module>
