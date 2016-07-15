@@ -18,30 +18,38 @@
     font-size: 120%;
     }
     .left{
-      margin-left: 5em;
-    }
-    .leftz{
       margin-left: 20px;
     }
-    .leftzz{
-      margin-left: 12px;
-    }
-    .leftm{
-      margin-left: 2em;
-    }
-    .lefte{
-      margin-left: 8px;
-    }
     .top{
-      margin: 20px;
+      margin-left: 10px;
+      margin-bottom: 20px;
+    }
+    .topz{
+      margin-top: 20px;
     }
     .right{
-      margin-right: 46em;
+      margin-right: 3em;
     }
     .icon{
       width: 20px;
       height: 20px;
       color: gray;
+    }
+    .box{
+      border: 1px solid #ccc!important;
+      border-radius: 8px;
+    }
+    .flex-2{
+      margin-left: 5em;
+    }
+    .flex-3{
+      margin-left: 2em;
+    }
+    .text{
+      text-align: right;
+    }
+    .center{
+      width: 30px;
     }
     paper-tabs[no-bar] paper-tab.iron-selected {
     color: blue;
@@ -57,27 +65,27 @@
       <div class="flex"><h3><my-title title="Email Connections"></my-title></h3></div>
     </div>
     <div class="horizontal layout">
-      <div class="left"><iron-icon icon="icons:mail"></iron-icon></div>
-      <div class="leftz">Email</div>
-      <div class="leftz"><paper-toggle-button></paper-toggle-button></div>
+      <div class="flex-2"><iron-icon icon="icons:mail"></iron-icon></div>
+      <div class="flex-3">Email</div>
+      <div class="flex-3"><paper-toggle-button></paper-toggle-button></div>
     </div>
 
     <div class="horizontal layout top">
-      <div  class="leftm"><my-title title="SMTP"></my-title></div>
-      <div  class="leftz"><iron-icon class="icon" icon="notification:sms-failed"></iron-icon></div>
-      <div  class="leftz"><input type="text" name="name" value=""></div>
-    </div>
-
-    <div class="horizontal layout top">
-      <div  class="lefte"><my-title title="Username"></my-title></div>
-      <div  class="leftz"><iron-icon class="icon" icon="notification:sms-failed"></iron-icon></div>
-      <div  class="leftz"><input type="text" name="name" value=""></div>
-    </div>
-
-    <div class="horizontal layout top">
-      <div  class="leftzz"><my-title title="Password"></my-title></div>
-      <div  class="leftz"><iron-icon class="icon" icon="notification:sms-failed"></iron-icon></div>
-      <div  class="leftz"><input type="password" name="name" value=""></div>
+      <div  class="flex-3 text">
+        <div class="topz"><my-title title="SMTP"></my-title></div>
+        <div class="topz"><my-title title="Username"></my-title></div>
+        <div class="topz"><my-title title="Password"></my-title></div>
+      </div>
+      <div class="left">
+        <div class="topz"><iron-icon class="icon" icon="notification:sms-failed"></iron-icon></div>
+        <div class="topz"><iron-icon class="icon" icon="notification:sms-failed"></iron-icon></div>
+        <div class="topz"><iron-icon class="icon" icon="notification:sms-failed"></iron-icon></div>
+      </div>
+      <div class="left">
+        <div class="topz"><input class="box" type="text" name="name" value=""></div>
+        <div class="topz"><input class="box" type="text" name="name" value=""></div>
+        <div class="topz"><input class="box" type="password" name="name" value=""></div>
+      </div>
     </div>
 
     <div class="content">

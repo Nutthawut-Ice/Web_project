@@ -12,6 +12,9 @@
     .top{
       margin: 20px;
     }
+    .text{
+      text-align: right;
+    }
     .tween{
       width:150px;
       height: 50px;
@@ -30,6 +33,10 @@
     }
     .right{
       margin-right: 46em;
+    }
+    .box{
+      border: 1px solid #ccc!important;
+      border-radius: 8px;
     }
     paper-button.indigo {
       background-color: var(--paper-blue-500);
@@ -54,15 +61,17 @@
       <h3><my-title title="google Setting"></my-title></h3>
     </div>
 
-    <div class="horizontal justified layout top">
-      <div><my-title title="google  Client ID"></my-title></div>
-      <div class="right"><input type="text" name="name" value=""></div>
+    <div class="horizontal layout">
+      <div class="text">
+        <div class="top"><my-title title="google  Client ID"></my-title></div>
+        <div class="top"><my-title title="google  Client Secret"></my-title></div>
+      </div>
+      <div>
+        <div class="top"><input class="box" type="text" name="name" value=""></div>
+        <div class="top"><input class="box" type="text" name="name" value=""></div>
+      </div>
     </div>
 
-    <div class="horizontal justified layout top">
-      <div><my-title title="google  Client Secret"></my-title></div>
-      <div class="right"><input type="text" name="name" value=""></div>
-    </div>
 
     <div>
       <paper-button raised class="indigo">บันทึก</paper-button>

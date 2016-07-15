@@ -23,13 +23,16 @@
   .big{
     --iron-icon-height: 42px;
     --iron-icon-width: 42px;
-
+  }
+  .box{
+    border: 1px solid #ccc!important;
+    border-radius: 8px;
   }
   .left{
     margin-left: 20px;
   }
-  .right{
-    margin-right: 46em;
+  .text{
+    text-align: right;
   }
   paper-button.indigo {
     background-color: var(--paper-blue-500);
@@ -54,24 +57,19 @@
     <h3><my-title title="LDAP Setting"></my-title></h3>
   </div>
 
-  <div class="horizontal justified layout top">
-    <div><my-title title="Server"></my-title></div>
-    <div class="right"><input type="text" name="name" value=""></div>
-  </div>
-
-  <div class="horizontal justified layout top">
-    <div><my-title title="Seacrh Base"></my-title></div>
-    <div class="right"><input type="text" name="name" value=""></div>
-  </div>
-
-  <div class="horizontal justified layout top">
-    <div><my-title title="Username"></my-title></div>
-    <div class="right"><input type="text" name="name" value=""></div>
-  </div>
-
-  <div class="horizontal justified layout top">
-    <div><my-title title="Password"></my-title></div>
-    <div class="right"><input type="password" name="name" value=""></div>
+  <div class="horizontal layout left">
+    <div class="text">
+      <div class="top"><my-title title="Server"></my-title></div>
+      <div class="top"><my-title title="Seacrh Base"></my-title></div>
+      <div class="top"><my-title title="Username"></my-title></div>
+      <div class="top"><my-title title="Password"></my-title></div>
+    </div>
+    <div>
+      <div class="top"><input  class="box" type="text" name="name" value=""></div>
+      <div class="top"><input  class="box" type="text" name="name" value=""></div>
+      <div class="top"><input  class="box" type="text" name="name" value=""></div>
+      <div class="top"><input  class="box" type="password" name="name" value=""></div>
+    </div>
   </div>
 
   <div>
